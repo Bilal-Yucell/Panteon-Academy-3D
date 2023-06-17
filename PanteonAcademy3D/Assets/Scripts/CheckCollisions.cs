@@ -13,9 +13,17 @@ public class CheckCollisions : MonoBehaviour
         if (other.CompareTag("Coin"))
         {
             // Debug.Log("Coin collected");
-            AddCoin();
             // Destroy(other.gameObject);
+            AddCoin();
             other.gameObject.SetActive(false);
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Obstacle"))
+        {
+            Debug.Log("GAME OVER");
         }
     }
 
