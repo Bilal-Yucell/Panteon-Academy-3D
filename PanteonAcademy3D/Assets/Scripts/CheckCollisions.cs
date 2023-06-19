@@ -13,8 +13,8 @@ public class CheckCollisions : MonoBehaviour
         if (other.CompareTag("Coin"))
         {
             // Debug.Log("Coin collected");
-            // Destroy(other.gameObject);
             AddCoin();
+            // Destroy(other.gameObject);
             other.gameObject.SetActive(false);
         }
     }
@@ -23,7 +23,7 @@ public class CheckCollisions : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Obstacle"))
         {
-            Debug.Log("GAME OVER");
+            Debug.Log("Touched Obstacle!");
         }
     }
 
