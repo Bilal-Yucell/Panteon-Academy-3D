@@ -7,6 +7,12 @@ public class CheckCollisions : MonoBehaviour
 {
     public int score;
     public TextMeshProUGUI CoinText;
+    Vector3 PlayerStartPos;
+
+    private void Start()
+    {
+        PlayerStartPos = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -24,6 +30,12 @@ public class CheckCollisions : MonoBehaviour
         if (collision.gameObject.CompareTag("Obstacle"))
         {
             Debug.Log("Touched Obstacle!");
+            transform.position = PlayerStartPos;
+        }
+
+        if (collision.gameObject.CompareTag("BumberObs"))
+        {
+            Debug.Log("Touched BumberObs!");
         }
     }
 
