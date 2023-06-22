@@ -8,9 +8,12 @@ public class PlayerController : MonoBehaviour
     public float xSpeed;
     public float limitX;
 
+    public Animator PlayerAnim;
+    public GameObject Player;
+
     void Start()
     {
-
+        PlayerAnim = Player.GetComponentInChildren<Animator>();
     }
 
 

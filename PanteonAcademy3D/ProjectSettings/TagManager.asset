@@ -8,6 +8,8 @@ TagManager:
   - Obstacle
   - speedboost
   - BumberObs
+  - Runner
+  - Speedboost
   layers:
   - Default
   - TransparentFX
